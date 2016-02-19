@@ -636,12 +636,6 @@ static int __init lge_panic_handler_early_init(void)
 	unsigned long ramoops_size = 0;
 	int ret = 0;
 
-#ifdef CONFIG_KEXEC_HARDBOOT
-	unsigned long kexec_hardboot_addr = 0;
-	unsigned long kexec_hardboot_size = SZ_1M;
-#endif
-
-
 	panic_handler = kzalloc(sizeof(*panic_handler), GFP_KERNEL);
 	if (!panic_handler) {
 		pr_err("could not allocate memory for panic_handler\n");
